@@ -11,7 +11,7 @@ func main() {
 	var sum = 0
 	for i = 0; i <= N; i++ {
 		var digitSum = digitSum(i)
-		if digitSum >= A || digitSum <= B {
+		if digitSum >= A && digitSum <= B {
 			sum += i
 		}
 	}
