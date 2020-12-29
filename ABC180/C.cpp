@@ -1,22 +1,24 @@
 #include <bits/stdc++.h>
 #include <math.h>
 using namespace std;
+#define ll long long
 
 int main(){
-  int N;
+  ll N;
   cin >> N;
-  
-  vector<int> x;
-  for(int i=0;i<N;i++) cin >> x[i];
-  
-  long ans1 = 0;
-  for(int i=0;i<N;i++) ans1 += abs(x[i]);
-  
-  long ans2 = 0;
-  for(int i=0;i<N;i++) ans2 += abs(x[i])*(long)abs(x[i]);
-  
-  int ans3 = 0;
-  for(int i=0;i<N;i++) ans3 = max(ans3,x[i]);
-    
-  cout << ans1 << endl << printf("%.15f", sqrt(ans2)) << endl << ans3 << endl;
+  vector<ll> ans;
+  for(int i=1;i<=sqrt(N);i++) {
+    if(N%i == 0) {
+      ans.push_back(i);
+    }
+    if(N/i != i) {
+      ans.push_back(N/i);
+    }
+  }
+
+  sort(ans.begin(),ans.end());
+
+  for (int i = 0;i<ans.size();i++) {
+    cout << ans.at(i) << endl;
+  }
 }
