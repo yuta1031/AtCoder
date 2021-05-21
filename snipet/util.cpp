@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+#define rep(i, m, n) for (int i = (int m); i < (int)(n); i++)
 
 // 最大公約数
 int gcd(int a, int b){
@@ -12,6 +12,12 @@ int gcd(int a, int b){
 // 最小公倍数
 int lcm(int a, int b){
 	return a * b / gcd(a, b);
+}
+
+// 桁数
+int digits(ll n){
+  if(n/10 == 0) return 1;
+  return digits(n/10)+1;
 }
 
 int main() {
