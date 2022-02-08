@@ -67,23 +67,4 @@ vector<ll> factalization(ll x)
 
 int main()
 {
-	// 最小公倍数
-	cout << lcm(5, 15) << endl;
-	// 最大公約数
-	cout << __gcd(24, 6) << endl;
-	// nの桁数
-	cout << digits(9999) << endl;
-
-	// bit全探索
-	rep(bit, 0, 1 << 3)
-	{
-		rep(j, 0, 3)
-		{
-			if (bit & 1 << j)
-				cout << 1;
-			else
-				cout << 0;
-		}
-		cout << endl;
-	}
 }

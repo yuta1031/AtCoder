@@ -2,10 +2,19 @@
 
 - VSCodeのインストール
 - VSCode プラグインのインストール
-    - C++
+    - C/C++
     - Code Runner
+    - CodeLLDB
 - gccのインストール
-- シンボリックリンクの設定(VSCodeでgccを使うようにする)
+- シンボリックリンクの設定(VSCodeで最新のclangを使うようにする, gccだとデバッガで不具合あり)
+    - IntelliSenseで最新のg++17を使うよう設定
+    - ビルドで最新のg++17を使うよう設定
+- デバッガの設定
+    - `launch.json > type: "lldb"`　を設定
+- 外部ライブラリの追加
+    - プロジェクト内に外部ライブラリを配置
+    - IntelliSenseのincludeパスにプロジェクト内パスを追加
+    - ビルドのincludeパスにプロジェクト内パスを追加
 
 ## 解法の指針
 - 全探索
